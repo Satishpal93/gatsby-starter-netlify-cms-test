@@ -1,4 +1,4 @@
 ---
 title: New Examples
-image: /img/blog-index.jpg
+image: /img/jumbotron.jpg
 ---
