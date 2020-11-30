@@ -1,6 +1,6 @@
 ---
-templateKey: 'product-page'
+templateKey: product-page
 path: /products
-title: New Examples 1
+title: New Examples
 image: /img/jumbotron.jpg
 ---
