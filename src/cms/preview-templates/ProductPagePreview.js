@@ -21,19 +21,16 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       intro={{ blurbs }}
       main={{
         heading: entry.getIn(['data', 'main', 'heading']),
-        description: entry.getIn(['data', 'main', 'description']),
-        image1: {
-          image: getAsset(entry.getIn(['data', 'main', 'image1', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image1', 'alt']),
-        },
-        image2: {
-          image: getAsset(entry.getIn(['data', 'main', 'image2', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image2', 'alt']),
-        },
-        image3: {
-          image: getAsset(entry.getIn(['data', 'main', 'image3', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image3', 'alt']),
-        },
+        product: {
+          Image: {
+            image: getAsset(entry.getIn(['data', 'main', 'image', 'image'])),
+            alt: entry.getIn(['data', 'main', 'image', 'alt']),
+          },
+          heading: entry.getIn(['data', 'main', 'heading']),
+          description: entry.getIn(['data', 'pricing', 'description']),
+        }
+        
+        
       }}
       fullImage={entry.getIn(['data', 'full_image'])}
       testimonials={testimonials}

@@ -71,4 +71,4 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "newexamples-page"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Product, name: product, widget: object, fields: [{label: Image, name: image, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Product, name: product, widget: object, fields: [{label: Image, name: Image, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}]}]}

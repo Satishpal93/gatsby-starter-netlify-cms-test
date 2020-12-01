@@ -44,7 +44,7 @@ export const NewExamplesPageTemplate = ({
             <div className="column is-4">
               <div className="">
                 <article className="tile is-child">
-                  <PreviewCompatibleImage imageInfo={main.product.image} />
+                  <PreviewCompatibleImage imageInfo={main.product.Image} />
                 </article>
                 <h3 className="has-text-weight-semibold is-size-3">
                   {main.product.heading}
@@ -65,9 +65,9 @@ NewExamplesPageTemplate.propTypes = {
   main: PropTypes.shape({
     heading: PropTypes.string,
     product: PropTypes.shape({
+      Image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       heading: PropTypes.string,
       description: PropTypes.string,
-      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     }),
   }),
 }
@@ -111,7 +111,7 @@ export const newExamplesPageQuery = graphql`
         main {
           heading
           product {
-            image {
+            Image {
               alt
               image {
                 childImageSharp {
