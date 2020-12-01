@@ -20,4 +20,7 @@ main:
       alt: Product 1
     heading: Product 1
     description: Product testing testing testing testing testing testing
+    image:
+      alt: Product 1
+      image: /img/products-grid1.jpg
 ---
