@@ -44,23 +44,13 @@ export const NewExamplesPageTemplate = ({
             <div className="column is-4">
               <div className="">
                 <article className="tile is-child">
-                  <PreviewCompatibleImage imageInfo={main.product.image1} />
+                  <PreviewCompatibleImage imageInfo={main.product.image} />
                 </article>
                 <h3 className="has-text-weight-semibold is-size-3">
                   {main.product.heading}
                 </h3>
                 <p>{main.product.description}</p>
               </div>
-            </div>
-            <div className="column is-4">
-              <article className="tile is-child">
-                <PreviewCompatibleImage imageInfo={main.image2} />
-              </article>
-            </div>
-            <div className="column is-4">
-              <article className="tile is-child">
-                <PreviewCompatibleImage imageInfo={main.image3} />
-              </article>
             </div>
           </div>
         </div>
@@ -74,12 +64,10 @@ NewExamplesPageTemplate.propTypes = {
   title: PropTypes.string,
   main: PropTypes.shape({
     heading: PropTypes.string,
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     product: PropTypes.shape({
       heading: PropTypes.string,
       description: PropTypes.string,
-      image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     }),
   }),
 }
@@ -123,7 +111,7 @@ export const newExamplesPageQuery = graphql`
         main {
           heading
           product {
-            image1 {
+            image {
               alt
               image {
                 childImageSharp {
@@ -135,26 +123,6 @@ export const newExamplesPageQuery = graphql`
             }
             heading
             description
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 352, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 352, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
         }
       }

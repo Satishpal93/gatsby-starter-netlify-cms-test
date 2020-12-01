@@ -11,20 +11,12 @@ const NewExamplesPagePreview = ({ entry, getAsset }) => {
       main={{
         heading: entry.getIn(['data', 'main', 'heading']),
         product: {
-          image1: {
-            image: getAsset(entry.getIn(['data', 'main', 'product', 'image1', 'image'])),
-            alt: entry.getIn(['data', 'main', 'product', 'image1', 'alt']),
+          image: {
+            image: getAsset(entry.getIn(['data', 'main', 'product', 'image', 'image'])),
+            alt: entry.getIn(['data', 'main', 'product', 'image', 'alt']),
           },
           heading: entry.getIn(['data', 'main', 'product', 'heading']),
           description: entry.getIn(['data', 'main', 'product', 'description'])          
-        },
-        image2: {
-          image: getAsset(entry.getIn(['data', 'main', 'image2', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image2', 'alt']),
-        },
-        image3: {
-          image: getAsset(entry.getIn(['data', 'main', 'image3', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image3', 'alt']),
         },
       }}
     />
