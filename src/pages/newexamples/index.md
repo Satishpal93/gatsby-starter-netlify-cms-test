@@ -23,4 +23,7 @@ main:
     image:
       alt: Product 1
       image: /img/products-grid1.jpg
+    Image:
+      image: /img/apple-touch-icon.png
+      alt: Product 1
 ---
