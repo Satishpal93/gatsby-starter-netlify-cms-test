@@ -42,9 +42,15 @@ export const NewExamplesPageTemplate = ({
           </div>
           <div className="columns">
             <div className="column is-4">
-              <article className="tile is-child">
-                <PreviewCompatibleImage imageInfo={main.image1} />
-              </article>
+              <div className="">
+                <article className="tile is-child">
+                  <PreviewCompatibleImage imageInfo={main.product.image1} />
+                </article>
+                <h3 className="has-text-weight-semibold is-size-3">
+                  {main.product.heading}
+                </h3>
+                <p>{main.product.description}</p>
+              </div>
             </div>
             <div className="column is-4">
               <article className="tile is-child">
@@ -68,9 +74,13 @@ NewExamplesPageTemplate.propTypes = {
   title: PropTypes.string,
   main: PropTypes.shape({
     heading: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    product: PropTypes.shape({
+      heading: PropTypes.string,
+      description: PropTypes.string,
+      image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
   }),
 }
 
@@ -112,15 +122,19 @@ export const newExamplesPageQuery = graphql`
         }
         main {
           heading
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 352, quality: 92) {
-                  ...GatsbyImageSharpFluid
+          product {
+            image1 {
+              alt
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 352, quality: 92) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
+            heading
+            description
           }
           image2 {
             alt
