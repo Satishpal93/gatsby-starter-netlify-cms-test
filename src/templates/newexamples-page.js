@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Products from '../components/Products'
+import Features from '../components/Features'
 
 export const NewExamplesPageTemplate = ({
   image,
@@ -11,7 +12,7 @@ export const NewExamplesPageTemplate = ({
 }) => (
   <div className="content">
     <div
-      className="full-width-image-container margin-top-0"
+      className="full-width-image-container margin-top-0 margin-bottom-0"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -30,33 +31,26 @@ export const NewExamplesPageTemplate = ({
         {title}
       </h2>
     </div>
-    <section className="section section--gradient">
+    <section className="section">
       <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-12">
-              <h3 className="has-text-weight-semibold text-center is-size-3">
-                {main.heading}
-              </h3>
-            </div>
-          </div>
-          <Products gridItems={main.product} />
-          {/* <div className="columns">
-            <div className="column is-4">
-              <div className="">
-                <article className="tile is-child">
-                  <PreviewCompatibleImage imageInfo={main.product.Image} />
-                </article>
-                <h3 className="has-text-weight-semibold is-size-3">
-                  {main.product.heading}
-                </h3>
-                <p>{main.product.description}</p>
-              </div>
-            </div>
-          </div> */}
-        </div>
+        <h3 className="has-text-weight-semibold text-center is-size-3">
+          {main.heading}
+        </h3>
+        <Products gridItems={main.product} />
       </div>
     </section>
+    <div
+      className="full-width-image-container margin-top-0 margin-bottom-0"
+      style={{
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
+      }}
+    >
+      <div className="container">
+
+      </div>
+    </div>
   </div>
 )
 
@@ -65,12 +59,7 @@ NewExamplesPageTemplate.propTypes = {
   title: PropTypes.string,
   main: PropTypes.shape({
     heading: PropTypes.string,
-    product: PropTypes.array,
-    // product: PropTypes.shape({
-    //   Image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    //   heading: PropTypes.string,
-    //   description: PropTypes.string,
-    // }),
+    product: PropTypes.array
   }),
 }
 
