@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Products from '../components/Products'
 
 export const NewExamplesPageTemplate = ({
   image,
@@ -40,7 +40,8 @@ export const NewExamplesPageTemplate = ({
               </h3>
             </div>
           </div>
-          <div className="columns">
+          <Products gridItems={main.product} />
+          {/* <div className="columns">
             <div className="column is-4">
               <div className="">
                 <article className="tile is-child">
@@ -52,7 +53,7 @@ export const NewExamplesPageTemplate = ({
                 <p>{main.product.description}</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
@@ -64,11 +65,12 @@ NewExamplesPageTemplate.propTypes = {
   title: PropTypes.string,
   main: PropTypes.shape({
     heading: PropTypes.string,
-    product: PropTypes.shape({
-      Image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      heading: PropTypes.string,
-      description: PropTypes.string,
-    }),
+    product: PropTypes.array,
+    // product: PropTypes.shape({
+    //   Image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    //   heading: PropTypes.string,
+    //   description: PropTypes.string,
+    // }),
   }),
 }
 
