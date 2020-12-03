@@ -42,5 +42,14 @@ main:
         alt: Product 6
       description: Product testing testing testing testing testing testing testing
       heading: Product 6
-      
+testimonials:
+  - quote: The first time I tried Kaldi’s coffee, I couldn’t even believe that was
+      the same thing I’ve been drinking every morning. The first time I tried
+      Kaldi’s coffee, I couldn’t even believe that was the same thing I’ve been
+      drinking every morning.
+    author: – Elisabeth Kaurismäki
+  - quote: The first time I tried Kaldi’s coffee, I couldn’t even believe that was
+      the same thing I’ve been drinking every morning. The first time I tried
+      Kaldi’s coffee,
+    author: – Philipp Trommler
 ---
