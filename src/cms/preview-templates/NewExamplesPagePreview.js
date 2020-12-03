@@ -10,7 +10,7 @@ const NewExamplesPagePreview = ({ entry, getAsset }) => {
       title={entry.getIn(['data', 'title'])}
       main={{
         heading: entry.getIn(['data', 'main', 'heading']),
-        products: []
+        product: []
         // product: {
         //   Image: {
         //     image: getAsset(entry.getIn(['data', 'main', 'product', 'image', 'image'])),

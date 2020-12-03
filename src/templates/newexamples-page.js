@@ -113,7 +113,7 @@ export const newExamplesPageQuery = graphql`
         main {
           heading
           product {
-            Image {
+            image {
               alt
               image {
                 childImageSharp {
