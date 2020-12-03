@@ -42,4 +42,17 @@ main:
         alt: Product 6
       description: Product testing testing testing testing testing testing testing
       heading: Product 6
+intro:
+  heading: Great coffee with no compromises
+  description: We hold our coffee to the highest standards from the shrub to the
+    cup. That’s why we’re meticulous and transparent about each step of the
+    coffee’s journey. We personally visit each farm to make sure the conditions
+    are optimal for the plants, farmers and the local environment.
+  blurbs:
+    - image: /img/products-grid2.jpg
+      text: testing 1
+    - image: /img/products-grid3.jpg
+      text: testing 1
+    - image: /img/products-grid1.jpg
+      text: testing 1
 ---
