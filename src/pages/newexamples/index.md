@@ -32,4 +32,14 @@ main:
         alt: Product 4
       description: Product testing testing testing testing testing testing testing
       heading: Product 4
+    - description: Product testing testing testing testing testing testing testing
+      heading: Product 5
+      image:
+        alt: Product 5
+        image: /img/products-grid2.jpg
+    - image:
+        image: /img/products-grid3.jpg
+        alt: Product 6
+      description: Product testing testing testing testing testing testing testing
+      heading: Product 6
 ---
