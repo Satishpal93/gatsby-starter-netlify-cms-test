@@ -52,7 +52,7 @@ intro:
     - image: /img/products-grid2.jpg
       text: testing 1
     - image: /img/products-grid3.jpg
-      text: testing 1
+      text: testing 2
     - image: /img/products-grid1.jpg
-      text: testing 1
+      text: testing 3
 ---
