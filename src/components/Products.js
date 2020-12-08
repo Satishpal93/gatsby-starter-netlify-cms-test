@@ -12,7 +12,7 @@ const ProductGrid = ({ gridItems }) => (
         <h3 className="has-text-weight-semibold is-size-3">
           {item.heading}
         </h3>
-        <p>{item.description}</p>
+        <p className="description">{item.description}</p>
       </div>
     ))}
   </div>
